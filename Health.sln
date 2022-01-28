@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32106.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Health.Server", "Health\Server\Health.Server.csproj", "{5F7F77C7-2E96-40FE-B30A-499C755DB2C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Health.Server", "Health\Server\Health.Server.csproj", "{5F7F77C7-2E96-40FE-B30A-499C755DB2C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Health.Client", "Health\Client\Health.Client.csproj", "{617C3240-4B2E-4F04-87AE-40386F76E12B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Health.Client", "Health\Client\Health.Client.csproj", "{617C3240-4B2E-4F04-87AE-40386F76E12B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Health.Shared", "Health\Shared\Health.Shared.csproj", "{EC1F80D2-C2DE-4527-AE11-D6A9145D1DEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Health.Shared", "Health\Shared\Health.Shared.csproj", "{EC1F80D2-C2DE-4527-AE11-D6A9145D1DEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
