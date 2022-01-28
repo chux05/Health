@@ -1,7 +1,9 @@
+using Health.Server.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -23,12 +25,12 @@ namespace Health.Server
         public void ConfigureServices(IServiceCollection services)
         {
 
-            //services.AddDbContext<ApplicationDbContext>(options =>
-            //{
+            services.AddDbContext<AppDbContext>(options =>
+            {
 
-            //    options.UseSqlServer(Configuration.GetConnectionString("sqlConnection"));
+                options.UseSqlServer(Configuration.GetConnectionString("sqlConnection"));
 
-            //});
+            });
 
             services.AddControllersWithViews();
             services.AddRazorPages();

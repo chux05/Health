@@ -1,15 +1,17 @@
 ﻿@page "/health"
 
-@using Client.Pages;
+@inject HttpClient httpClient 
+
+@using Health.Shared 
 
 <div class="contaier">
     
     <div class="cards">
-        <div class="card">No symptoms</div>
-        <div class="card">Flu symptoms</div>
-        <div class="card">Covid symptoms</div>
-        <div class="card">Tested positive</div>
-        <div class="card">Tested Negetive</div>
+        <div class="card" @onclick = "Post">@HealthStatus_[0]</div>
+        <div class="card">@HealthStatus_[1]</div>
+        <div class="card">@HealthStatus_[2]</div>
+        <div class="card">@HealthStatus_[3]</div>
+        <div class="card">@HealthStatus_[4]</div>
     </div>
 </div>
 
@@ -48,5 +50,24 @@
 </style>
 
 @code {
+
+    Status status = new Status();
+
+    string[] HealthStatus_ = new string[5];
+
+
+
+    private async Task Post()
+    {
+        HealthStatus_[0] = "No symptoms";
+        HealthStatus_[1] = "No symptoms";
+        HealthStatus_[2] = "No symptoms";
+        HealthStatus_[3] = "No symptoms";
+        HealthStatus_[4] = "No symptoms"; 
+
+
+
+        await httpClient.PostAsJsonAsync("/api/Status", status);
+    }
 
 }
